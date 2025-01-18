@@ -1,0 +1,6 @@
+flask==2.2.5
+boto3==1.28.16
+plotly==5.17.0
+kafka-python==2.0.2
+textblob==0.17.1
+pyspark==3.5.0

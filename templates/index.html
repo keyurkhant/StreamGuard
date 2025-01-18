@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Real-Time Sentiment Dashboard</title>
+</head>
+<body>
+    <h1>Real-Time Sentiment Dashboard</h1>
+    <div id="sentiment-chart"></div>
+    <script>
+        var data = [{
+            x: ['Positive', 'Negative', 'Neutral'],
+            y: [{{ sentiment_counts['positive'] }}, {{ sentiment_counts['negative'] }}, {{ sentiment_counts['neutral'] }}],
+            type: 'bar'
+        }];
+        Plotly.newPlot('sentiment-chart', data);
+    </script>
+</body>
+</html>
